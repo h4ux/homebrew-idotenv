@@ -5,20 +5,20 @@
 class Idotenv < Formula
   desc ""
   homepage "https://github.com/h4ux/homebrew-idotenv"
-  version "0.0.17"
+  version "0.0.18"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.17/idotenv_Darwin_x86_64.tar.gz"
-      sha256 "4d95ecb7686206d8ef58c52377c1b832b8089d3638d3b80ddee4f72041978822"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.18/idotenv_Darwin_x86_64.tar.gz"
+      sha256 "dbc73f7fa715df940a8c35c276de1721f5969040c92a17f40824ce9b4a576a21"
 
       def install
         bin.install "idotenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.17/idotenv_Darwin_arm64.tar.gz"
-      sha256 "2ad9f75e2697ee7b12d878a5d0ec22b8b0d6ce2d941b90932444cd8544864155"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.18/idotenv_Darwin_arm64.tar.gz"
+      sha256 "887326677c54a2568d21071a441c3893f30e1bc73bb62788386a42adc988a149"
 
       def install
         bin.install "idotenv"
@@ -28,16 +28,16 @@ class Idotenv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.17/idotenv_Linux_arm64.tar.gz"
-      sha256 "40b9be185b1bc27c53135a455d05a5b81c538d0611c621547cedb0adbd8cf014"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.18/idotenv_Linux_arm64.tar.gz"
+      sha256 "3ffaf920ba9900c98d37b316b552dd046f2084364bab78ee937ac2dbe3b6e534"
 
       def install
         bin.install "idotenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.17/idotenv_Linux_x86_64.tar.gz"
-      sha256 "80799ab6db4dcfbb194352c3cc8947c62d75d9764eeab0db4a48a440476029ca"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.18/idotenv_Linux_x86_64.tar.gz"
+      sha256 "3a647840e4323024fdcecdb18db4831611cd1eb2a19710d650d5ad24ea449ef3"
 
       def install
         bin.install "idotenv"

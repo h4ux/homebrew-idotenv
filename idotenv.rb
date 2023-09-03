@@ -5,20 +5,20 @@
 class Idotenv < Formula
   desc ""
   homepage "https://github.com/h4ux/homebrew-idotenv"
-  version "0.0.13"
+  version "0.0.15"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.13/idotenv_Darwin_x86_64.tar.gz"
-      sha256 "857a057b4e6c34c93d01cc650dee8fda2e020b449e9b1681deb666c8346f97aa"
+    if Hardware::CPU.arm?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Darwin_arm64.tar.gz"
+      sha256 "b74f72c7beb851ae8a6254addd49024c038431e3b48d3efe02478d00ac1200e0"
 
       def install
         bin.install "idotenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.13/idotenv_Darwin_arm64.tar.gz"
-      sha256 "3f113a6b32d1c667535a4aa378334ea41d4efcd10c691393f1701e7bdfba0dad"
+    if Hardware::CPU.intel?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Darwin_x86_64.tar.gz"
+      sha256 "1067efa8682b925c131b59fea6a5a76bd28f18ce9c57284f3df5e20e575cfb26"
 
       def install
         bin.install "idotenv"
@@ -27,17 +27,17 @@ class Idotenv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.13/idotenv_Linux_x86_64.tar.gz"
-      sha256 "f4bdb64bf03e72f1906297a67b85396d6dfcc76f7db3a93ad12226fab0c985d6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Linux_arm64.tar.gz"
+      sha256 "b1974ac64a1e524b59f35e46b7c2c682952cf9c1398bfeedc6d01989a3d4c4ba"
 
       def install
         bin.install "idotenv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.13/idotenv_Linux_arm64.tar.gz"
-      sha256 "500774bd5ce0fbf11569d7889140f16861d97ffb1acd7ec6e18015511bb4c7bc"
+    if Hardware::CPU.intel?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Linux_x86_64.tar.gz"
+      sha256 "048581f2a5a6f7a33124bf6510a0d864cb0f25cea8af3ea0fb5ec80b7a0665c4"
 
       def install
         bin.install "idotenv"

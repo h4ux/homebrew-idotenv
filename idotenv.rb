@@ -5,20 +5,20 @@
 class Idotenv < Formula
   desc ""
   homepage "https://github.com/h4ux/homebrew-idotenv"
-  version "0.0.15"
+  version "0.0.16"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Darwin_arm64.tar.gz"
-      sha256 "b74f72c7beb851ae8a6254addd49024c038431e3b48d3efe02478d00ac1200e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.16/idotenv_Darwin_x86_64.tar.gz"
+      sha256 "eddc9edd3c98a46fbb74c2a386f1c8a14e706c05b75a5f00cbac6bbf66624214"
 
       def install
         bin.install "idotenv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Darwin_x86_64.tar.gz"
-      sha256 "1067efa8682b925c131b59fea6a5a76bd28f18ce9c57284f3df5e20e575cfb26"
+    if Hardware::CPU.arm?
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.16/idotenv_Darwin_arm64.tar.gz"
+      sha256 "337ab563639a120479542d8f087f8617664982c8facf7b8da419c4f9d5ed1054"
 
       def install
         bin.install "idotenv"
@@ -28,16 +28,16 @@ class Idotenv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Linux_arm64.tar.gz"
-      sha256 "b1974ac64a1e524b59f35e46b7c2c682952cf9c1398bfeedc6d01989a3d4c4ba"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.16/idotenv_Linux_arm64.tar.gz"
+      sha256 "6bbfcecf3eb1cada8b246e672e957c3f9a3a8e3eed37f24a9a8a689206b5aff2"
 
       def install
         bin.install "idotenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/h4ux/idotenv/releases/download/v0.0.15/idotenv_Linux_x86_64.tar.gz"
-      sha256 "048581f2a5a6f7a33124bf6510a0d864cb0f25cea8af3ea0fb5ec80b7a0665c4"
+      url "https://github.com/h4ux/idotenv/releases/download/v0.0.16/idotenv_Linux_x86_64.tar.gz"
+      sha256 "58d749f10a413dc47f8fbc1e398d8393850f19c4a8c9b9f544b550ec26078fbc"
 
       def install
         bin.install "idotenv"
